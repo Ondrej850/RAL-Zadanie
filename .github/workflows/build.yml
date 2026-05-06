@@ -1,0 +1,27 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install MinGW cross-compiler
+        run: sudo apt-get install -y gcc-mingw-w64-x86-64
+
+      - name: Build
+        run: |
+          x86_64-w64-mingw32-gcc -std=c99 -O2 -o linrec.exe main.c
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linrec-windows
+          path: linrec.exe
