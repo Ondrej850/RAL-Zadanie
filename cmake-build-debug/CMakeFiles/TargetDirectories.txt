@@ -1,0 +1,3 @@
+C:/Users/opale/OneDrive/Počítač/PT/RAL/cmake-build-debug/CMakeFiles/RAL.dir
+C:/Users/opale/OneDrive/Počítač/PT/RAL/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/opale/OneDrive/Počítač/PT/RAL/cmake-build-debug/CMakeFiles/rebuild_cache.dir
